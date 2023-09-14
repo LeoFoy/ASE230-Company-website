@@ -31,7 +31,38 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h1 class="home-title">We love make things amazing and simple</h1>
+                    <h1 class="home-title">Orion AeroSpace Dynamics</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-white text-center">
+                    <h3 class="home-title">Overview:</h3>
+                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
+                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
+                    <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
+                            href="javascript: void(0);" class="play-btn video-play-icon"><i
+                                class="mdi mdi-play text-center"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-white text-center">
+                    <h3 class="home-title">Mission Statement:</h3>
                     <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
                         iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
                     <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
@@ -53,7 +84,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>A digital web design studio creating modern & engaging online</h3>
+                        <h3>Key Products & Services:</h3>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
@@ -74,7 +105,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>A digital web design studio creating modern & engaging online</h3>
+                        <h3>Awards:</h3>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
@@ -94,7 +125,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>A digital web design studio creating modern & engaging online</h3>
+                        <h3>Team:</h3>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
@@ -114,7 +145,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h2 class="section-title text-center">Get In Touch</h2>
+                    <h3 class="section-title text-center">Get In Touch</h3>
                     <div class="section-title-border mt-3"></div>
                     <p class="section-subtitle text-muted text-center font-secondary pt-4">We thrive when coming up with
                         innovative ideas but also understand that a smart concept should be supported with faucibus

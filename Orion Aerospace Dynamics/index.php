@@ -89,12 +89,29 @@ $teamArray = csvFiletoArray('..\data\team.csv');
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
+
                     <h4 class="home-small-title">Awesome Design</h4>
                     <h1 class="home-title">We love make things amazing and simple</h1>
                     <p class="pt-3 home-desc mx-auto"><?php
                     print_r($teamArray);
 
                 ?></p>
+
+                    <h1 class="home-title"><?='Orion AeroSpace Dynamics'?></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-white text-center">
+                    <h3 class="home-title">Overview:</h3>
+                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
+                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
+
                     <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
                             href="javascript: void(0);" class="play-btn video-play-icon"><i
                                 class="mdi mdi-play text-center"></i></a></p>

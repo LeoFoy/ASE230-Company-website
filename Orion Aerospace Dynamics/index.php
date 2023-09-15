@@ -37,19 +37,19 @@
         </div>
     </section>
 	
-	<section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
+    <section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
                     <?php
-					$path='plaintext.html';
-					$content=file_get_contents($path);
-					echo $content;
-					?>
-				</div>
-			</div>
+		    $path='plaintext.html';
+		    $content=file_get_contents($path);
+		    echo $content;
+		    ?>
 		</div>
+	   </div>
+	</div>
     </section>
     <!--END TXT Part-->
 

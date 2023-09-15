@@ -1,6 +1,5 @@
-<h1>Orion Aerospace Dynamics</h1>
-<h2>Overview:</h2>
+<h3>Overview:</h3>
 <p>Orion Aerospace Dynamics, founded in 2021, is a game-changing aerospace company headquartered atop the serene peaks of Denver, Colorado. Championing the motto "The Sky is Not the Limit," Orion has been redefining space exploration and aviation with advanced propulsion systems, space habitats, and aerial vehicles that seem straight out of science fiction.</p>
-<br>
-<h2>Mission Statement:</h2>
+
+<h3>Mission Statement:</h3>
 <p>"To push the boundaries of human reach, making the vast expanse of space a familiar terrain and ensuring Earth's skies are traveled sustainably."</p>

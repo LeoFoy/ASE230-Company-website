@@ -1,4 +1,8 @@
-
+<?php
+include('..\lib\csvFunc.php');
+$awardsArray = csvFiletoArray('..\data\awards.csv');
+$teamArray = csvFiletoArray('..\data\team.csv');
+?>
 <!DOCTYPE html>
 <?php
 include('..\lib\csvFunc.php');
@@ -585,6 +589,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
                     </div>
                 </div>
 
+
                 <div class="col-lg-4">
                     <div class="blog-box mt-4">
                         <img src="images/blog/img-3.jpg" class="img-fluid rounded" alt="">
@@ -597,6 +602,21 @@ $teamArray = csvFiletoArray('..\data\team.csv');
                                 <a href="" class="read-btn">Read More <i class="mdi mdi-arrow-right"></i></a>
                             </div>
                         </div>
+
+	<!--START CSV Part-->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="features-box mt-5 mt-lg-0">
+                        <h3><?='Awards:'?></h3>
+                        <?php foreach($awardArray as $award){?>
+                        <ul class="text-muted list-unstyled mt-4 features-item-list">
+                            <li class=""><?=$awardArray[0]?></li>
+                            <li class=""><?=$awardArray[1]?></li>
+                        </ul>
+                    <?php }?>
+
                     </div>
                 </div>
 

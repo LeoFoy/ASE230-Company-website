@@ -1,5 +1,10 @@
 
 <!DOCTYPE html>
+<?php
+include('..\lib\csvFunc.php');
+$awardsArray = csvFiletoArray('..\data\awards.csv');
+$teamArray = csvFiletoArray('..\data\team.csv');
+?>
 <html lang="en">
 
 <head>
@@ -86,8 +91,10 @@
                 <div class="col-lg-8 text-white text-center">
                     <h4 class="home-small-title">Awesome Design</h4>
                     <h1 class="home-title">We love make things amazing and simple</h1>
-                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
-                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
+                    <p class="pt-3 home-desc mx-auto"><?php
+                    print_r($teamArray);
+
+                ?></p>
                     <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
                             href="javascript: void(0);" class="play-btn video-play-icon"><i
                                 class="mdi mdi-play text-center"></i></a></p>
@@ -334,53 +341,23 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-1.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Frank Johnson</h4>
-                        <p class="text-uppercase team-designation">CEO</p>
-                    </div>
-                </div>
 
+                <?php foreach ($teamArray as $teammate) {
+                        
+                ?>
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-box text-center">
                         <div class="team-wrapper">
                             <div class="team-member">
-                                <img alt="" src="images/team/img-2.jpg" class="img-fluid rounded">
+                                <img alt="" src="#" class="img-fluid rounded">
                             </div>
                         </div>
-                        <h4 class="team-name">Elaine Stclair</h4>
-                        <p class="text-uppercase team-designation">Designer</p>
+                        <h4 class="team-name"><?=$teammate[0]?></h4>
+                        <p class="text-uppercase team-designation"><?=$teammate[1]?></p>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-3.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Wanda Arthur</h4>
-                        <p class="text-uppercase team-designation">Developer</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-4.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Joshua Stemple</h4>
-                        <p class="text-uppercase team-designation">Manager</p>
-                    </div>
-                </div>
+<?php }?>
+               
 
             </div>
         </div>

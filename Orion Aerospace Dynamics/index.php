@@ -1,30 +1,30 @@
 
 <!DOCTYPE html>
-<?php
+<html lang="en">
+<?php 
 include('..\lib\csvFunc.php');
 $awardsArray = csvFiletoArray('..\data\awards.csv');
 $teamArray = csvFiletoArray('..\data\team.csv');
 ?>
-<html lang="en">
-
 <head>
+
     <meta charset="utf-8" />
     <title>Company Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
-    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
-    <meta content="Themesbrand" name="author" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" >
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" >
+    <meta content="Themesbrand" name="author" >
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" >
 
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
 
     <!-- icon -->
-    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/colors/cyan.css" id="color-opt">
 </head>
 
@@ -36,7 +36,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h1 class="home-title">Orion AeroSpace Dynamics</h1>
+                    <h1 class="home-title"><?='Orion AeroSpace Dynamics'?></h1>
                 </div>
             </div>
         </div>
@@ -55,6 +55,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
                                 class="mdi mdi-play text-center"></i></a></p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -130,7 +131,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3><?=''?></h3>
+                        <h3></h3>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">

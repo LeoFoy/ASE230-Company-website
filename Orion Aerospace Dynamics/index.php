@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,14 +41,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <?php
-		    $path='plaintext.html';
-		    $content=file_get_contents($path);
-		    echo $content;
-		    ?>
-		</div>
-	   </div>
-	</div>
+                    
+		        </div>
+	        </div>
+	    </div>
     </section>
     <!--END TXT Part-->
 

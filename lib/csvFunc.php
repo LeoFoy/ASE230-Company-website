@@ -7,6 +7,7 @@ function csvFiletoArray($csvFile){
 		$csvArray[] = $record;
 	}
 	array_splice($csvArray, 0,1);
+	fclose($f);
 	return $csvArray;
 }
 

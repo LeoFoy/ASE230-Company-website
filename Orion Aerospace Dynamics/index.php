@@ -1,8 +1,13 @@
 <?php require_once('../lib/textFunc.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+include('..\lib\csvFunc.php');
+$awardArray = csvFiletoArray('..\data\awards.csv');
+$teamArray = csvFiletoArray('..\data\team.csv');
+?>
 <head>
+
     <meta charset="utf-8" />
     <?php displayText(6);?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,16 +15,16 @@
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
     <meta content="Themesbrand" name="author" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" >
 
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
 
     <!-- icon -->
-    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/colors/cyan.css" id="color-opt">
 </head>
 
@@ -81,14 +86,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Awards:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
+                        <h3><?='Awards:'?></h3>
+                        <?php foreach ($awardArray as $award) { ?>
+                        <p class="text-muted web-desc"><?= $award[0] ?></p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
+                            <li class=""><?= $award[1] ?></li>
                         </ul>
+                    <?php }?>
                     </div>
                 </div>
             </div>
@@ -101,14 +105,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Team:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
-                        <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
-                        </ul>
+                        <h3><?= 'Meet the Team:'?></h3>
+                        <?php foreach ($teamArray as $member) {
+                            ?>
+                        <h4><?=$member[0]?></h4>  
+                        <h5><?=$member[1]?></h5>
+                        <p class="text-muted web-desc"><?=$member[2]?></p>
+                        <?php }?>
                     </div>
                 </div>
             </div>

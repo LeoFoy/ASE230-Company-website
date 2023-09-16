@@ -1,3 +1,4 @@
+<?php require_once('../lib/textFunc.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php 
@@ -8,11 +9,11 @@ $teamArray = csvFiletoArray('..\data\team.csv');
 <head>
 
     <meta charset="utf-8" />
-    <title><?='Company Website'?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" >
-    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" >
-    <meta content="Themesbrand" name="author" >
+    <?php displayText(6);?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+    <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+    <meta content="Themesbrand" name="author" />
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" >
 
@@ -35,51 +36,26 @@ $teamArray = csvFiletoArray('..\data\team.csv');
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h1 class="home-title"><?='Orion AeroSpace Dynamics'?></h1>
+                    <?php displayText(1); ?>
                 </div>
             </div>
         </div>
     </section>
-    
+	
     <section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h3 class="home-title">Overview:</h3>
-                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
-                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
-                    <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
-                            href="javascript: void(0);" class="play-btn video-play-icon"><i
-                                class="mdi mdi-play text-center"></i></a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-home home-half" id="home" data-image-src="images/bg-home.jpg">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-white text-center">
-                    <h3 class="home-title">Mission Statement:</h3>
-                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
-                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
-                    <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
-                            href="javascript: void(0);" class="play-btn video-play-icon"><i
-                                class="mdi mdi-play text-center"></i></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <?php
+                        displayText(2);
+                        displayText(3);
+                        displayText(4);
+                        displayText(5);
+                    ?>
+		        </div>
+	        </div>
+	    </div>
     </section>
     <!--END TXT Part-->
 
@@ -89,7 +65,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Key Products & Services:</h3>
+                        <?php displayText(7);?>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
@@ -104,7 +80,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
     </section>
     <!--END JSON Part-->
 
-    <!--START CSV Part-->
+	<!--START CSV Part-->
     <section class="section" id="features">
         <div class="container">
             <div class="row align-items-center">
@@ -141,7 +117,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             </div>
         </div>
     </section>
-    <!--END CSV Part-->
+	<!--END CSV Part-->
 
     <!-- CONTACT FORM START-->
     <section class="section " id="contact">

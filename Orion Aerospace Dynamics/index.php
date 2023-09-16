@@ -1,17 +1,14 @@
-<?php require_once('../lib/textFunc.php') ?>
 <?php
-require_once("../lib/jsonFunc.php");
-$array_json = jsonFiletoArray("../data/data.json");
+    require_once('../lib/textFunc.php');
+    require_once("../lib/jsonFunc.php");
+    $array_json = jsonFiletoArray("../data/data.json");
+    include('..\lib\csvFunc.php');
+    $awardArray = csvFiletoArray('..\data\awards.csv');
+    $teamArray = csvFiletoArray('..\data\team.csv');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-include('..\lib\csvFunc.php');
-$awardArray = csvFiletoArray('..\data\awards.csv');
-$teamArray = csvFiletoArray('..\data\team.csv');
-?>
 <head>
-
     <meta charset="utf-8" />
     <?php displayText(6);?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,7 +69,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
                         <?php displayText(7);?>
 						<?php for($i=0; $i<count($array_json); $i++) { ?>
 							<p class="text-muted web-desc"><b><?php echo $array_json[$i]['Product'].': '.$array_json[$i]['Product_Desc']; ?></b></p>
-							<h6>Applications: </h6>
+                            <?php displayText(8); ?>
 							<ul class="text-muted list-unstyled mt-4 features-item-list">
 								<li class=""><?php echo $array_json[$i]['Applications_names'][0].': '.$array_json[$i]['Application_desc'][0]; ?></li>
 								<li class=""><?php echo $array_json[$i]['Applications_names'][1].': '.$array_json[$i]['Application_desc'][1]; ?></li>
@@ -96,7 +93,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3><?='Awards:'?></h3>
+                        <?php displayText(9); ?>
                         <?php foreach ($awardArray as $award) { ?>
                         <p class="text-muted web-desc"><?= $award[0] ?></p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
@@ -115,7 +112,7 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3><?= 'Meet the Team:'?></h3>
+                        <?php displayText(10);?>
                         <?php foreach ($teamArray as $member) {
                             ?>
                         <h4><?=$member[0]?></h4>  
@@ -134,24 +131,19 @@ $teamArray = csvFiletoArray('..\data\team.csv');
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h3 class="section-title text-center">Get In Touch</h3>
+                    <?php displayText(11); ?>
                     <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center font-secondary pt-4">We thrive when coming up with
-                        innovative ideas but also understand that a smart concept should be supported with faucibus
-                        sapien odio measurable
-                        results.</p>
+                    <?php displayText(12); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mt-4 pt-4">
-                        <p class="mt-4"><span class="h5">Office Address 1:</span><br> <span
-                                class="text-muted d-block mt-2">4461 Cedar Street Moro, AR 72368</span></p>
-                        <p class="mt-4"><span class="h5">Office Address 2:</span><br> <span
-                                class="text-muted d-block mt-2">2467 Swick Hill Street <br />New Orleans, LA
-                                70171</span></p>
-                        <p class="mt-4"><span class="h5">Working Hours:</span><br> <span
-                                class="text-muted d-block mt-2">9:00AM To 6:00PM</span></p>
+                        <?php 
+                            displayText(13); 
+                            displayText(14);
+                            displayText(15);
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-8">

@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <?php 
 include('..\lib\csvFunc.php');
-$awardsArray = csvFiletoArray('..\data\awards.csv');
+$awardArray = csvFiletoArray('..\data\awards.csv');
 $teamArray = csvFiletoArray('..\data\team.csv');
 ?>
 <head>
 
     <meta charset="utf-8" />
-    <title>Company Website</title>
+    <title><?='Company Website'?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" >
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" >
@@ -111,14 +110,13 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Awards:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
+                        <h3><?='Awards:'?></h3>
+                        <?php foreach ($awardArray as $award) { ?>
+                        <p class="text-muted web-desc"><?= $award[0] ?></p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
+                            <li class=""><?= $award[1] ?></li>
                         </ul>
+                    <?php }?>
                     </div>
                 </div>
             </div>
@@ -131,14 +129,13 @@ $teamArray = csvFiletoArray('..\data\team.csv');
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3></h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
-                        <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
-                        </ul>
+                        <h3><?= 'Meet the Team:'?></h3>
+                        <?php foreach ($teamArray as $member) {
+                            ?>
+                        <h4><?=$member[0]?></h4>  
+                        <h5><?=$member[1]?></h5>
+                        <p class="text-muted web-desc"><?=$member[2]?></p>
+                        <?php }?>
                     </div>
                 </div>
             </div>

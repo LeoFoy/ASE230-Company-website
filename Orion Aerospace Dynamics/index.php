@@ -1,9 +1,10 @@
+<?php require_once('../lib/textFunc.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Company Website</title>
+    <?php displayText(6);?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
@@ -30,7 +31,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h1 class="home-title">Orion AeroSpace Dynamics</h1>
+                    <?php displayText(1); ?>
                 </div>
             </div>
         </div>
@@ -41,7 +42,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    
+                    <?php
+                        displayText(2);
+                        displayText(3);
+                        displayText(4);
+                        displayText(5);
+                    ?>
 		        </div>
 	        </div>
 	    </div>
@@ -54,7 +60,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Key Products & Services:</h3>
+                        <?php displayText(7);?>
                         <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
                             Semantics, a large language ocean.</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">

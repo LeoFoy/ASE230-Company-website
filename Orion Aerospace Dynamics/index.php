@@ -1,4 +1,8 @@
 <?php require_once('../lib/textFunc.php') ?>
+<?php
+require_once("../lib/jsonFunc.php");
+$array_json = jsonFiletoArray("../data/data.json");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php 
@@ -66,13 +70,19 @@ $teamArray = csvFiletoArray('..\data\team.csv');
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
                         <?php displayText(7);?>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
-                        <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
-                        </ul>
+						<?php for($i=0; $i<count($array_json); $i++) { ?>
+							<p class="text-muted web-desc"><b><?php echo $array_json[$i]['Product'].': '.$array_json[$i]['Product_Desc']; ?></b></p>
+							<h6>Applications: </h6>
+							<ul class="text-muted list-unstyled mt-4 features-item-list">
+								<li class=""><?php echo $array_json[$i]['Applications_names'][0].': '.$array_json[$i]['Application_desc'][0]; ?></li>
+								<li class=""><?php echo $array_json[$i]['Applications_names'][1].': '.$array_json[$i]['Application_desc'][1]; ?></li>
+							</ul>
+							<br />
+							<br />
+								
+						<?php } ?>
+                        
+                      
                     </div>
                 </div>
             </div>

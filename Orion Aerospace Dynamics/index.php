@@ -1,24 +1,31 @@
+<?php
+    require_once('../lib/textFunc.php');
+    require_once("../lib/jsonFunc.php");
+    $array_json = jsonFiletoArray("../data/data.json");
+    include('..\lib\csvFunc.php');
+    $awardArray = csvFiletoArray('..\data\awards.csv');
+    $teamArray = csvFiletoArray('..\data\team.csv');
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
-    <title>Company Website</title>
+    <?php displayText(6);?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
     <meta content="Themesbrand" name="author" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" >
 
     <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
 
     <!-- icon -->
-    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/pe-icon-7-stroke.css">
 
-    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/colors/cyan.css" id="color-opt">
 </head>
 
@@ -30,7 +37,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h1 class="home-title">Orion AeroSpace Dynamics</h1>
+                    <?php displayText(1); ?>
                 </div>
             </div>
         </div>
@@ -41,7 +48,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    
+                    <?php
+                        displayText(2);
+                        displayText(3);
+                        displayText(4);
+                        displayText(5);
+                    ?>
 		        </div>
 	        </div>
 	    </div>
@@ -54,14 +66,20 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Key Products & Services:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
-                        <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
-                        </ul>
+                        <?php displayText(7);?>
+						<?php for($i=0; $i<count($array_json); $i++) { ?>
+							<p class="text-muted web-desc"><b><?php echo $array_json[$i]['Product'].': '.$array_json[$i]['Product_Desc']; ?></b></p>
+                            <?php displayText(8); ?>
+							<ul class="text-muted list-unstyled mt-4 features-item-list">
+								<li class=""><?php echo $array_json[$i]['Applications_names'][0].': '.$array_json[$i]['Application_desc'][0]; ?></li>
+								<li class=""><?php echo $array_json[$i]['Applications_names'][1].': '.$array_json[$i]['Application_desc'][1]; ?></li>
+							</ul>
+							<br />
+							<br />
+								
+						<?php } ?>
+                        
+                      
                     </div>
                 </div>
             </div>
@@ -75,14 +93,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Awards:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
+                        <?php displayText(9); ?>
+                        <?php foreach ($awardArray as $award) { ?>
+                        <p class="text-muted web-desc"><?= $award[0] ?></p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
+                            <li class=""><?= $award[1] ?></li>
                         </ul>
+                    <?php }?>
                     </div>
                 </div>
             </div>
@@ -95,14 +112,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>Team:</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
-                        <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
-                        </ul>
+                        <?php displayText(10);?>
+                        <?php foreach ($teamArray as $member) {
+                            ?>
+                        <h4><?=$member[0]?></h4>  
+                        <h5><?=$member[1]?></h5>
+                        <p class="text-muted web-desc"><?=$member[2]?></p>
+                        <?php }?>
                     </div>
                 </div>
             </div>
@@ -115,24 +131,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h3 class="section-title text-center">Get In Touch</h3>
+                    <?php displayText(11); ?>
                     <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center font-secondary pt-4">We thrive when coming up with
-                        innovative ideas but also understand that a smart concept should be supported with faucibus
-                        sapien odio measurable
-                        results.</p>
+                    <?php displayText(12); ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mt-4 pt-4">
-                        <p class="mt-4"><span class="h5">Office Address 1:</span><br> <span
-                                class="text-muted d-block mt-2">4461 Cedar Street Moro, AR 72368</span></p>
-                        <p class="mt-4"><span class="h5">Office Address 2:</span><br> <span
-                                class="text-muted d-block mt-2">2467 Swick Hill Street <br />New Orleans, LA
-                                70171</span></p>
-                        <p class="mt-4"><span class="h5">Working Hours:</span><br> <span
-                                class="text-muted d-block mt-2">9:00AM To 6:00PM</span></p>
+                        <?php 
+                            displayText(13); 
+                            displayText(14);
+                            displayText(15);
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-8">

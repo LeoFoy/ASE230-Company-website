@@ -1,4 +1,5 @@
 <?php
+//created by Julianna Truitt
 require_once("products.php");
 if(count($_POST)>0){
 	//Process info

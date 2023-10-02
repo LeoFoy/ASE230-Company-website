@@ -1,4 +1,5 @@
 <?php
+//created by Julianna Truitt
 require_once("products.php");
 $array_json = jsonFiletoArray("../../data/data.json");
 $item = $array_json[$_GET['index']];
@@ -21,5 +22,5 @@ $item = $array_json[$_GET['index']];
 	<button type="submit">Save Changes</button>
 </form>
 <?php
-replaceElementInArrayJson("../../data/data.json")
+	replaceElementInArrayJson("../../data/data.json")
 ?>

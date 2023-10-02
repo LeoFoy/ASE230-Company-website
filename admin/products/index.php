@@ -1,4 +1,5 @@
 <?php
+//created by Julianna Truitt
 require_once("products.php");
 $array_json = jsonFiletoArray("../../data/data.json");
 ?>

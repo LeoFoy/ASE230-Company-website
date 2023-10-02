@@ -1,4 +1,5 @@
 <?php
+	//created by Julianna Truitt
 	require_once("products.php");
 	$content = file_get_contents("../../data/data.json");
 	$content = json_decode($content, true);

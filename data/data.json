@@ -1,59 +1,50 @@
 [
-	{
-		"Product":"Galactic Cruiser™",
-		"Product_Desc":"An innovative spacecraft designed for deep space exploration, equipped with advanced life support systems and AI-driven navigation",
-		"Applications_names": 
-			[
-				"Steller Drive Propulsion",
-				"Holodeck Entertainment"
-			],
-		"Application_desc":
-			[
-				"A proprietary system that allows the Cruiser to achieve faster-than-ever travel speeds, reducing interplanetary journey times.",
-				"A VR-based entertainment zone that simulates Earthly experiences, ensuring mental well-being during long space journeys."
-			]
-	},
-	{
-		"Product":"SkySailor Drones™",
-		"Product_Desc":"Environmentally-friendly drones powered by solar and wind energy, suitable for both recreational and professional use",
-		"Applications_names":
-			[	
-				"Eco-Cam Tech",
-				"Infinite Flight Mode"
-			],
-		"Application_desc":
-			[
-				"Advanced camera systems that can monitor ecosystems with minimal intrusion.",
-				"Leveraging solar and wind energy, these drones can stay airborne for significantly extended periods compared to conventional drones."
-			]
-	},
-	{
-		"Product":"Nebula Stations™",
-		"Product_Desc":"Modular space habitats intended for research, tourism, and potential future colonization efforts.",
-		"Applications_names":
-			[
-				"Bio-Dome Agriculture",
-				"Gravity Pods"
-			],
-		"Application_desc":
-			[
-				"State-of-the-art agricultural domes that simulate Earth's conditions, allowing fresh produce growth in space.",
-				"Areas within the station that can simulate varying levels of gravity, from Earth-like conditions to zero-G zones."
-			]
-	},
-	{
-		"Product":"AeroAcademy™",
-		"Product_Desc":"An immersive training institution offering programs in aerospace engineering, astronaut training, and space tourism orientation.",
-		"Applications_names":
-			[
-				"Virtual Spacewalks",
-				"Intergalactic Culture Modules"
-			],
-		"Application_desc":
-			[
-				"Training sessions in VR that prepare astronauts for extravehicular activities.",
-				"Courses that introduce students to the speculated cultures and societal structures of potential extraterrestrial civilizations."
-			]
-	}
-
+    {
+        "Product": "Galactic Cruiser",
+        "Product_Desc": "An innovative spacecraft designed for deep space exploration, equipped with advanced life support systems and AI-driven navigation",
+        "First_app_name": "Steller Drive Propulsion",
+        "Second_app_name": "Holodeck Entertainment",
+        "First_app_desc": "A proprietary system that allows the Cruiser to achieve faster-than-ever travel speeds, reducing interplanetary journey times.",
+        "Second_app_desc": "A VR-based entertainment zone that simulates Earthly experiences, ensuring mental well-being during long space journeys."
+    },
+    {
+        "Product": "SkySailor Drones",
+        "Product_Desc": "Environmentally-friendly drones powered by solar and wind energy, suitable for both recreational and professional use",
+        "First_app_name": "Eco-Cam Tech",
+        "Second_app_name": "Infinite Flight Mode",
+        "First_app_desc": "Advanced camera systems that can monitor ecosystems with minimal intrusion.",
+        "Second_app_desc": "Leveraging solar and wind energy, these drones can stay airborne for significantly extended periods compared to conventional drones."
+    },
+    {
+        "Product": "Nebula Stations",
+        "Product_Desc": "Modular space habitats intended for research, tourism, and potential future colonization efforts.",
+        "First_app_name": "Bio-Dome Agriculture",
+        "Second_app_name": "Gravity Pods",
+        "First_app_desc": "State-of-the-art agricultural domes that simulate Earth's conditions, allowing fresh produce growth in space.",
+        "Second_app_desc": "Areas within the station that can simulate varying levels of gravity, from Earth-like conditions to zero-G zones."
+    },
+    {
+        "Product": "AeroAcademy",
+        "Product_Desc": "An immersive training institution offering programs in aerospace engineering, astronaut training, and space tourism orientation.",
+        "First_app_name": "Virtual Spacewalks",
+        "Second_app_name": "Intergalactic Culture Modules",
+        "First_app_desc": "Training sessions in VR that prepare astronauts for extravehicular activities.",
+        "Second_app_desc": "Courses that introduce students to the speculated cultures and societal structures of potential extraterrestrial civilizations."
+    },
+    {
+        "Product": "ret",
+        "Product_Desc": "ert",
+        "First_app_name": "ert",
+        "Second_app_name": "et",
+        "First_app_desc": "erte",
+        "Second_app_desc": "etr"
+    },
+    {
+        "Product": "new",
+        "Product_Desc": "new",
+        "First_app_name": "new",
+        "Second_app_name": "new",
+        "First_app_desc": "new",
+        "Second_app_desc": "new"
+    }
 ]

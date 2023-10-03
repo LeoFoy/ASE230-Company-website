@@ -5,6 +5,7 @@
     include('..\lib\csvFunc.php');
     $awardArray = csvFiletoArray('..\data\awards.csv');
     $teamArray = csvFiletoArray('..\data\team.csv');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

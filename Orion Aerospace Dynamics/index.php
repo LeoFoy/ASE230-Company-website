@@ -74,8 +74,8 @@ $teamArray = csvFiletoArray('..\data\team.csv');
 							<p class="text-muted web-desc"><b><?php echo $array_json[$i]['Product'].': '.$array_json[$i]['Product_Desc']; ?></b></p>
 							<h6>Applications: </h6>
 							<ul class="text-muted list-unstyled mt-4 features-item-list">
-								<li class=""><?php echo $array_json[$i]['Applications_names'][0].': '.$array_json[$i]['Application_desc'][0]; ?></li>
-								<li class=""><?php echo $array_json[$i]['Applications_names'][1].': '.$array_json[$i]['Application_desc'][1]; ?></li>
+								<li class=""><?php echo $array_json[$i]['First_app_name'].': '.$array_json[$i]['First_app_desc']; ?></li>
+								<li class=""><?php echo $array_json[$i]['Second_app_name'].': '.$array_json[$i]['Second_app_desc']; ?></li>
 							</ul>
 							<br />
 							<br />

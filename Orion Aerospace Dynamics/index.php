@@ -5,6 +5,8 @@
     include('..\lib\csvFunc.php');
     $awardArray = csvFiletoArray('..\data\awards.csv');
     $teamArray = csvFiletoArray('..\data\team.csv');
+
+	require_once("contacts.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

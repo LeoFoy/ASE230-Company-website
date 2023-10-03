@@ -48,6 +48,11 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
+			<?php foreach($contacts as $name) { ?>
+				<h4><?=$name['name'].""?></h4>
+				<p><?=$name['email'].""?> <br> <?=$name['phone'].""?></p>
+				<a href="<?= "detail.php?name=".$name['name'] ?>">View Profile</a>
+			<?php } ?>
                     <?php
                         displayText(2);
                         displayText(3);

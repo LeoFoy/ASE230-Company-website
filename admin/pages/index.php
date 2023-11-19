@@ -1,6 +1,7 @@
 <?php
-    require_once("pages.php");
-    $array_json = jsonFiletoArray("../../data/pages.json");
+    require_once("pageClass.php");
+    $page = new Pages();
+	$array_json = $page->read();
 ?>
 <h1>Website Pages: </h1>
 <?php 

@@ -1,6 +1,7 @@
 <?php
-    require_once("pages.php");
-    $array_json = jsonFiletoArray("../../data/pages.json");
+    require_once("pageClass.php");
+	$page = new Pages();
+	$array_json = $page->read();
     $item = $array_json[$_GET['index']];
 ?>
 <a href="index.php">Go back to the index page</a>
@@ -13,5 +14,6 @@
 	<button type="submit">Save Changes</button>
 </form>
 <?php
-	replaceElementInArrayJson("../../data/pages.json")
+	$page = new Pages();
+	$page->edit();
 ?>

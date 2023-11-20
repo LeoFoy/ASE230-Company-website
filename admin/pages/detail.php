@@ -1,6 +1,7 @@
 <?php
-    require_once("pages.php");
-    $array_json = jsonFiletoArray("../../data/pages.json");
+    require_once("pageClass.php");
+    $page = new Pages();
+	$array_json = $page->read();
 ?>
 <h4><?php echo $array_json[$_GET['index']]['Page'].': '.$array_json[$_GET['index']]['PageDesc']; ?></h4>
 <a href="delete.php?index=<?php echo $_GET['index']; ?>">Delete Page</a>
